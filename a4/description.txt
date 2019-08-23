@@ -1,0 +1,34 @@
+Overview - In this project, i tried to collect friends of 10 users. Their screen_names are mentioned in users.txt file. Three users were Indian celebraties and 3 were from
+Hollywood. The other Three were organisations looking after flora and fauna to save the environment. They mostly raised issues about how humans are affecting our planet and why should we take precautions.
+The last user is a friend of mine. The reason for taking this user is to see how a common person fits into the community who have so much followers and to the community which is trying to take some stand on how to save our planet. To identify communities Grivan-newman Algo has been used.
+
+To classify i used the query #AvengersEndGame. As a huge fan of comic books i was curious to know wether people were liking the film or not. Here i used sentiment analysis and 
+gender Classification as well. For sentiment Analysis i used Afinn-dictionary to find out which tweets were positive and which were negative. For gender Classfication i have
+used the government data which provides males and feamle name and how common they are.
+
+==============================================================================================================================================
+
+Collect.py
+In this file i tried to collect 100 friends of each user. Total friends i got is 872. Though i went for the second hop and tried to collect the friends of their friends.
+But due to the rate limit error i dropped that idea. In this file i collected 872 friends and 2000 tweets. For collecting tweets Chicago and New york coordinates were used.
+
+
+===============================================================================================================================================
+
+Cluster.py
+
+In this file i tried Grivan-newman Algo for community Detection. After applying that algo we find two different communities. The final graph is stored in cluster1.png which is
+the original graph and cluster2.png shows us two different communities.
+
+================================================================================================================================================
+
+Classify.py
+
+1) First of all i use Afinn dictionary and return 10 positive and 10 negative tweets.
+2) Then i do gender classification. In this there were several parameters involved like tokenising the tweets and making of CSR matrix. The final accuracy which i got is 0.689
+
+=================================================================================================================================================
+
+summarize.py
+
+Peruses all the yield records of above files and makes summary.txt which has all the required examination.
