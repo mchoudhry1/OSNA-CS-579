@@ -1,0 +1,54 @@
+1. Looking at the top errors printed by get_top_misclassified, name two ways you would modify your classifier to improve accuracy (it could be features, tokenization, or something else.)
+
+1) We can tune in some parameters like using using 7 or 10 folds instead of 5 folds. Tunning the parameters properly is an important step 
+which can help in improving our model 
+2) We can go for text cleaning. Removing the noise from the text can help a lot in removing the errors printed by get_top_misclassified.
+3) We can use more data to train the classifier.
+4) There are some words that may sound negative but sometimes there use in a sentence can be positive. Hence we need to consider this also.
+5) We can implement other models like navy bayes, neural networks extra.
+6) We can remove features that occurs in less frequency as they dont play much importance. So we can remove them and improve our accuracy.
+
+
+
+
+2. Implement one of the above methods. How did it affect the results?
+Here we use 7 folds instead of 5 folds and see the accuracy
+
+the improved accuracies are-
+{'punct': False, 'features': [<function token_pair_features at 0x0710CB70>, <function lexicon_features at 0x0710CBB8>], 'min_freq': 5, 'accuracy': 0.7673926194797337}
+worst cross-validation result:
+{'punct': True, 'features': [<function lexicon_features at 0x0710CBB8>], 'min_freq': 2, 'accuracy': 0.64493129375162039}
+
+Mean Accuracies per Setting:
+features: token_pair_features lexicon_features: 0.75362
+features: token_pair_features: 0.72822
+features: token_features token_pair_features lexicon_features: 0.72276
+features: token_features token_pair_features: 0.71401
+min_freq2: 0.71183
+punctFalse: 0.70937
+min_freq5: 0.70630
+punctTrue: 0.70382
+min_freq10: 0.70164
+features: token_features lexicon_features: 0.69020
+features: token_features: 0.68989
+features: lexicon_features: 0.64746
+
+TOP COEFFICIENTS PER CLASS:
+negative words:
+neg_words: 0.83485
+token_pair=the__worst: 0.42973
+token_pair=is__so: 0.42396
+token_pair=about__the: 0.38438
+token_pair=looks__like: 0.36231
+
+positive words:
+pos_words: 0.56947
+token_pair=it__is: 0.32556
+token_pair=i__think: 0.32342
+token_pair=to__find: 0.31887
+token_pair=i__d: 0.30561
+testing accuracy=0.752500
+
+We can see that the accuracy has improved.
+
+Now here is the catch to improve the accuracy more we can increase the K-fold, but then we can face the overfitting problem.
