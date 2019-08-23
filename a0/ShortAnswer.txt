@@ -8,8 +8,18 @@ Jill Stein and Gary Johnson are more similar than Hillary Clinton and Donald
 Trump.
 
 How is this approach misleading? How might you fix it?
-
-
+Friends per candidate:
+DrJillStein 1642
+GovGaryJohnson 3511
+HillaryClinton 784
+realDonaldTrump 45
+each candidate follows a person due to some or other reason and they could have similar interest or totally different reasons. 
+The common friends count of DrJillStein and GovGaryJohnson is 236 and common friends count of HillaryClinton and 
+realDonaldTrump is 2. Also the number of people realDonaldTrump is significantly less than other candidates.Also gary follows almost
+3k people and jillstein follows almost 2k people. Here also the difference is of almost 1k which is quite significant and same goes for 
+Hillary clinton and donald trump. Hence we can conclude that each person behaviour is quite different. so we can not say that Jill Stein and Gary Johnson are
+more similar than Hillary Clinton and Donald Trump.
+We can fix this problem by studying there behaviour patterns and we can do that by applying machine learning algorithms.
 
 
 
@@ -23,9 +33,12 @@ do you think this user is followed by both Hilary Clinton and Donald Trump,
 who are rivals? Do some web searches to see if you can find out more
 information.
 
-
-
-
+User followed by Hillary and Donald: ['VP', 'WhiteHouse']
+The above are the two twitter IDs that both Hillary and Donald follows. @Whitehouse is the official Id of The white house 
+and the reason both these candidates follow is that this ID provides news about the latest decison that trump administration is taking and 
+also provide news about other major decision that are happening and how it will shape their country. @VP is the official Id of the the vice president 
+and Donald trump is the president and this could be the reason that he follows this account and hilary ran for president post and hence it could be one 
+of the reason that she follows this account.
 
 
 
@@ -39,6 +52,13 @@ information.
 Johnson follows over 3K accounts, while Donald Trump follows less than
 50). Why do you think this is? How might that affect our analysis?
 
+There could be many reasons as to why trump follows so less users and why other candidates follow more number of people.
+If we look into the friends of the trump, trump follows most of his family members and his administration staff and if we look into the friends of 
+any other candiddates they follow people outside there interest as well. One reason could be popularity. Now when trump ran for elections he was most famous and favoured at that time.
+and was able to influence the people and more over the people he follows are his family members and the persons who run his business and this tell us that trump is self centred 
+and this may be the reason why he follows so less number of people. .
+Yes it will affect our analysis as the variation is quite different in all the four cases. There are two candidates whose numbers are quite high and then there are two whose number 
+is quite low so if we try to plot a graph, the graph for gary and DrJillStein will be dense and for other two will not be dense. So we learn from this that no two persons are similar.
 
 
 
@@ -55,3 +75,10 @@ https://dev.twitter.com/rest/reference/get/friends/ids, how many requests will
 we have to make? Given how Twitter does rate limiting
 (https://dev.twitter.com/rest/public/rate-limiting), approximately how many
 minutes will it take to collect this data?
+
+Common friends = 5712
+and now we have 4 candidates
+total number of users = 5712+4 5716
+rate limit is of 15 minutes
+5716/15 = 381.06
+We can say that total time would be 381*15+1=5716 minutes
